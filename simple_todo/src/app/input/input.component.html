@@ -1,0 +1,6 @@
+<div style="display: flex; gap: 0.5rem">
+  <input type="text" [(ngModel)]="inputValue" placeholder="enter a value" />
+  <button (click)="isEditMode ? editItemHandler() : addNewItemHandler()">
+    {{ isEditMode ? "Edit" : "Add" }}
+  </button>
+</div>

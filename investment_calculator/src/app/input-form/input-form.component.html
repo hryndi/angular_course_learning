@@ -1,0 +1,60 @@
+<div class="bg-emerald-700 max-w-inputBar p-10">
+  <form (ngSubmit)="calculate()" action="" class="flex flex-wrap">
+    <div class="flex gap-4 w-full flex-wrap">
+      <div class="flex flex-col gap-2 max-w-72 w-full">
+        <label for="initial_investment" class="uppercase text-xs font-semibold"
+          >initial investment</label
+        >
+        <input
+          type="number"
+          name="initial_investment"
+          class="rounded w-full h-10 pl-2 bg-transparent outline outline-2 outline-gray-400 focus-visible:border-blue-700 focus-visible:border-2 focus-visible:outline-white placeholder:text-white"
+          placeholder="0"
+          [(ngModel)]="initialInvestment"
+        />
+      </div>
+      <div class="flex flex-col gap-2 max-w-72 w-full">
+        <label for="annual_investment" class="uppercase text-xs font-semibold"
+          >annual investment</label
+        >
+        <input
+          type="number"
+          name="annual_investment"
+          class="rounded w-full h-10 pl-2 bg-transparent outline outline-2 outline-gray-400 placeholder:text-white focus-visible:border-blue-700 focus-visible:border-2 focus-visible:outline-white"
+          placeholder="0"
+          [(ngModel)]="annualInvestment"
+        />
+      </div>
+      <div class="flex flex-col gap-2 max-w-72 w-full">
+        <label for="expected_return" class="uppercase text-xs font-semibold"
+          >expected return</label
+        >
+        <input
+          type="number"
+          name="expected_return"
+          class="rounded w-full placeholder:text-white h-10 pl-2 bg-transparent outline outline-2 outline-gray-400 focus-visible:border-blue-700 focus-visible:border-2 focus-visible:outline-white"
+          placeholder="0"
+          [(ngModel)]="expectedReturn"
+        />
+      </div>
+      <div class="flex flex-col gap-2 max-w-72 w-full">
+        <label for="duration" class="uppercase text-xs font-semibold"
+          >duration</label
+        >
+        <input
+          type="number"
+          name="duration"
+          class="rounded placeholder:text-white w-full h-10 pl-2 bg-transparent outline outline-2 outline-gray-400 focus-visible:border-blue-700 focus-visible:border-2 focus-visible:outline-white"
+          placeholder="0"
+          [(ngModel)]="duration"
+        />
+      </div>
+    </div>
+    <button
+      type="submit"
+      class="w-full rounded mt-7 uppercase text-black font-semibold bg-teal-300 p-1.5"
+    >
+      calculate
+    </button>
+  </form>
+</div>

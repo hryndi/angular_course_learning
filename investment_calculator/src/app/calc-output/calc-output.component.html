@@ -1,0 +1,28 @@
+<div class="mt-9 !max-w-full overflow-x-auto border-2 border-red-600">
+  <table
+    class="min-w-tableCustom size-full overflow-x-auto max-w-tableCustom table-fixed"
+  >
+    <tr class="text-emerald-200 text-sm">
+      <th class="break-inside-avoid min-w-8">Year</th>
+      <th class="break-inside-avoid min-w-8">Investment Value</th>
+      <th class="break-inside-avoid min-w-8">Interest(Year)</th>
+      <th class="break-inside-avoid min-w-8">Total Interest</th>
+      <th class="break-inside-avoid min-w-8">Invested Capital</th>
+    </tr>
+    @for (item of annualData; track item.id) {
+    <tr class="text-right">
+      <td>{{ item.year }}</td>
+      <td>
+        {{ item.annualInvestment | currency : "USD" : "symbol" : "1.1-2" }}
+      </td>
+      <td>{{ item.interest | currency : "USD" : "symbol" : "1.1-2" }}</td>
+      <td>
+        {{ item.totalInterest | currency : "USD" : "symbol" : "1.1-2" }}
+      </td>
+      <td>
+        {{ item.totalAmountInvested | currency : "USD" : "symbol" : "1.1-2" }}
+      </td>
+    </tr>
+    }
+  </table>
+</div>

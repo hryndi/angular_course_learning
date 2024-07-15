@@ -1,0 +1,7 @@
+<main class="w-full flex flex-col items-center border-2 border-red-600">
+  <app-header />
+
+  <app-input-form (annualDataEvent)="setOutput($event)" />
+  <p class="mt-8">Please enter some values and press "Calculate"</p>
+  <app-calc-output [annualData]="passedAnnualData" />
+</main>
